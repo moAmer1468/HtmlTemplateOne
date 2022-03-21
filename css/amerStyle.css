@@ -1,4 +1,4 @@
-/* gloabal rules  */
+/* global rules  */
 
 
 /* small screens */
@@ -302,3 +302,144 @@ body {
 
 
 /* End of the protfolio section */
+
+
+/* start of the about section */
+
+.about .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about .container .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width:991px) {
+    .about .container .about-content .about-image::before,
+    .about .container .about-content .about-image::after {
+        display: none
+    }
+}
+
+.about .container .about-content .about-image {
+    position: relative;
+    width: 250px;
+    height: 370px;
+    background-color: red;
+}
+
+.about .container .about-content .about-image::before {
+    content: "";
+    position: absolute;
+    width: 29%;
+    height: 121%;
+    background-color: var(--main-color);
+    z-index: -1;
+    top: -42px;
+    right: 184px;
+}
+
+.about .container .about-content .about-image::after {
+    content: "";
+    position: absolute;
+    height: 114%;
+    width: 120px;
+    z-index: -1;
+    top: -77px;
+    left: 90%;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+}
+
+@media (max-width:768px) {
+    .about .container .about-content .about-image {
+        display: none;
+    }
+    .about .container .about-content .text {
+        padding-left: 1px;
+    }
+}
+
+.about .container .about-content .about-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.about .container .about-content .text {
+    flex: 1;
+    padding-left: 100px;
+    text-align: start;
+}
+
+.about .container .about-content .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 60px;
+}
+
+.about .container .about-content .text hr {
+    width: 100%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+
+.about .container .about-content .text p:last-of-type {
+    margin-top: 10px;
+    line-height: 1;
+}
+
+
+/* End of the about section */
+
+
+/* start of the contact section */
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #777;
+}
+
+.contact-content p {
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: x-large;
+}
+
+.social i {
+    margin-left: 20px;
+    color: black;
+}
+
+
+/* End of the contact section */
+
+
+/* Start of the footer */
+
+.footer-cont {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-cont span {
+    color: var(--main-color);
+}
+
+
+/* End of the footer */
